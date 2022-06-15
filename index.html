@@ -260,8 +260,14 @@
                 <label for="layout-nao">Já tenho um layout</label>
               </div>
             </div>
-            <label for="prazo">Prazo</label>
-            <input type="range" name="prazo" id="prazo" />
+            <label for="prazo">Prazo (<span id="exibPercent"></span>) </label>
+
+            <input
+              type="range"
+              name="prazo"
+              id="prazo"
+              oninput="exibValor(this.value)"
+            />
             <button class="btn btn-orcamento" type="submit">Enviar</button>
           </form>
         </div>
